@@ -279,7 +279,7 @@ arrowRight.addEventListener("click", function () {
     weatherContainer.scrollLeft += 115;
 });
 
-// Try Again Button, when clicked resets the page!
+// Try-Again Button, when clicked resets the page!
 btnInp.addEventListener("click", function () {
     resetPage();
 });
