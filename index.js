@@ -198,7 +198,7 @@ searchBtn.addEventListener("click", function (e) {
     // At first the Geocoding API https://openweathermap.org/api/geocoding-api API gets called, through the city name that the user enters
     // and gives us the geolocations of the city so that the forecast API call can be called
     fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=bae645fed936e72ce50b3f4fc9a309d4`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=bae645fed936e72ce50b3f4fc9a309d4`
     )
         .then((response) => {
             // if there are characters which get rejected right away from the API, then
