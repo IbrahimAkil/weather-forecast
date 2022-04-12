@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/f0f7bf369a.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Weather-Travel-City</title>
+    </head>
+    <!-- This Weather-Travel-City-App is divided into 4 parts
+    Part 1: Header, which contains the 2 cloud logos and the headline of the App
+    Part 2: Search function, which search input with a button next to it
+    Additionally next to the search button there is a dropdown for how many days
+    the user wants to forecast
+    Part 3: Weather container, here is where all of the data from the API gets added into (dynamically through JS)
+    Part 4: Footer, here is the authors name: Ibrahim Akil and links to his GitHub repository 
+
+    Additionally there is a container for when errors happen, so that the user has a way
+    to click a button and get back into the normal flow of the application
+-->
+    <body>
+        <div class="header">
+            <img
+                class="logos cloud-logo"
+                src="/images/Design_ohne_Titel__1_-removebg-preview.png"
+                alt="logo of clouds"
+            />
+            <p class="app-title">Weather-Travel-City</p>
+            <img
+                class="logos cloud-logo"
+                src="/images/Design_ohne_Titel__1_-removebg-preview.png"
+                alt="logo of clouds"
+            />
+        </div>
+        <!-- The error message and button to return to the normal flow of the app -->
+        <div class="btn-try-again hide">
+            <p class="error-msg"></p>
+            <input class="btn-inp" type="button" value="Try Again" />
+        </div>
+        <!-- The search-container which holds everything relevant to search in it -->
+        <div class="search-container">
+            <div class="search-func">
+                <input
+                    type="search"
+                    class="city-search"
+                    placeholder="City you want to travel to..."
+                />
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <div class="forecast-container">
+                <label for="forecast-days" class="number-total-days"
+                    >Forecast Days:</label
+                >
+
+                <select name="forecast-days" id="forecast-days">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </div>
+        <!-- The arrows and weather elements -->
+        <div class="weather-arrows-container">
+            <div class="arrows arrow--0 hide">&#8592;</div>
+            <div class="weather-container"></div>
+            <div class="arrows arrow--1 hide">&#8594;</div>
+        </div>
+        <!-- Credentials of the author -->
+        <div class="footer">
+            <p class="author-code">Coded by Ibrahim Akil</p>
+            <a href="#">
+                <img
+                    class="github-link-logo"
+                    src="/images/GitHub-Mark-32px.png"
+                />
+            </a>
+            <p>
+                Resources:
+                <a href="https://openweathermap.org/api">Open Weather API</a>
+            </p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
