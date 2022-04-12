@@ -195,6 +195,13 @@ gets a red border and  it scales big then the rest of its sibling elements
     padding: 2rem 0px;
 }
 
+.open-weather {
+    text-decoration: none;
+}
+.open-weather:visited {
+    color: black;
+}
+
 /* When the device has a screen bigger/equal to 600px than the style of the website changes */
 @media only screen and (min-width: 600px) {
     .app-title {
